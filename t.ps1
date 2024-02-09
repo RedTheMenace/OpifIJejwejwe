@@ -1,0 +1,2 @@
+start notepad
+start calc
